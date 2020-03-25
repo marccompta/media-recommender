@@ -4,5 +4,19 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="5.1.2" />
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MediaRecommender.Application.Contracts\MediaRecommender.Application.Contracts.csproj" />
+    <ProjectReference Include="..\MediaRecommender.Application.Impl\MediaRecommender.Application.Impl.csproj" />
+    <ProjectReference Include="..\MediaRecommender.Data.MoviesInternalDb\MediaRecommender.Data.MoviesInternalDb.csproj" />
+    <ProjectReference Include="..\MediaRecommender.Data.TheMovieDb\MediaRecommender.Data.TheMovieDb.csproj" />
+    <ProjectReference Include="..\MediaRecommender.Data\MediaRecommender.Data.csproj" />
+    <ProjectReference Include="..\MediaRecommender.Models\MediaRecommender.Models.csproj" />
+  </ItemGroup>
+
 
 </Project>

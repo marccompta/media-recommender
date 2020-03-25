@@ -1,14 +1,10 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Autofac;
+using MediaRecommender.WebApi.App_Start;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 
 namespace MediaRecommender.WebApi
 {
@@ -21,10 +17,32 @@ namespace MediaRecommender.WebApi
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
+        /// <summary>
+        ///     ConfigureServices is where you register dependencies. This gets
+        ///     called by the runtime before the ConfigureContainer method, below.
+        /// </summary>
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
+            services
+                .RegisterApplicationLayer(Configuration)
+                .RegisterDomainLayer(Configuration)
+                .RegisterDataLayer(Configuration);
+        }
+
+        /// <summary>
+        ///     ConfigureContainer is where you can register things directly with Autofac.
+        ///     This runs after ConfigureServices so the things here will override
+        ///     registrations made in ConfigureServices.
+        /// </summary>
+        /// <param name="builder"></param>
+        public void ConfigureContainer(ContainerBuilder builder)
+        {
+            builder
+                .RegisterApplicationLayer(Configuration)
+                .RegisterDomainLayer(Configuration)
+                .RegisterDataLayer(Configuration);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

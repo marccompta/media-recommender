@@ -3,7 +3,37 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29728.190
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediaRecommender.WebApi", "MediaRecommender.WebApi\MediaRecommender.WebApi.csproj", "{435BEAD1-58C8-44EB-8C13-1AC8057FD6B6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MediaRecommender.WebApi", "MediaRecommender.WebApi\MediaRecommender.WebApi.csproj", "{435BEAD1-58C8-44EB-8C13-1AC8057FD6B6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.Presentation", "1.Presentation", "{3D42A0C5-70F5-4797-8930-ABDE35F5F530}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.DistributedServices", "2.DistributedServices", "{FFB8FED4-AC52-438A-B954-C4FC3E3821F5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.Application", "3.Application", "{7C29F109-4620-45BF-B77A-BD7D089367F9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.Domain", "4.Domain", "{5E6D8585-AC29-49BB-A7BF-D058A124263B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5.Data", "5.Data", "{FA8B0817-9BD2-4652-955A-02BC87BC8D4B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MediaRecommender.Models", "MediaRecommender.Models\MediaRecommender.Models.csproj", "{0E6F699F-EE67-43AF-8DDF-2481D28108C5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MediaRecommender.Data.TheMovieDb", "MediaRecommender.Data.TheMovieDb\MediaRecommender.Data.TheMovieDb.csproj", "{9DA6FC70-198C-49E8-950D-1C967517B5B1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MediaRecommender.Data", "MediaRecommender.Data\MediaRecommender.Data.csproj", "{F6D8F59C-67AD-492E-9CA6-03CF6CF366A2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MediaRecommender.Application.Contracts", "MediaRecommender.Application.Contracts\MediaRecommender.Application.Contracts.csproj", "{8289334E-A6A7-4256-A6B0-CBD62ABB1E27}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MediaRecommender.Application.Impl", "MediaRecommender.Application.Impl\MediaRecommender.Application.Impl.csproj", "{DAC6B0FB-8EA4-4751-9461-24EE9BA13BC7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MediaRecommender", "MediaRecommender\MediaRecommender.csproj", "{C8222F53-80D7-480D-8BDA-E7B3F0E9659B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MediaRecommender.Data.MoviesInternalDb", "MediaRecommender.Data.MoviesInternalDb\MediaRecommender.Data.MoviesInternalDb.csproj", "{63C87F78-879A-4722-85D4-7B77EBEF0CBC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediaRecommender.Application.Impl.Unit.Tests", "MediaRecommender.Application.Impl.Unit.Tests\MediaRecommender.Application.Impl.Unit.Tests.csproj", "{09B133D5-AE6A-45B1-92A7-B2329D5AE580}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediaRecommender.Unit.Tests", "MediaRecommender.Unit.Tests\MediaRecommender.Unit.Tests.csproj", "{585794B4-228B-4F5E-965D-33296097B7C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediaRecommender.Data.TheMovieDb.Unit.Tests", "MediaRecommender.Data.TheMovieDb.Unit.Tests\MediaRecommender.Data.TheMovieDb.Unit.Tests.csproj", "{DC9DC6C0-2179-4EC9-902C-50CC0931AB6A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +45,62 @@ Global
 		{435BEAD1-58C8-44EB-8C13-1AC8057FD6B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{435BEAD1-58C8-44EB-8C13-1AC8057FD6B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{435BEAD1-58C8-44EB-8C13-1AC8057FD6B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E6F699F-EE67-43AF-8DDF-2481D28108C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E6F699F-EE67-43AF-8DDF-2481D28108C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E6F699F-EE67-43AF-8DDF-2481D28108C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E6F699F-EE67-43AF-8DDF-2481D28108C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9DA6FC70-198C-49E8-950D-1C967517B5B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DA6FC70-198C-49E8-950D-1C967517B5B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DA6FC70-198C-49E8-950D-1C967517B5B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DA6FC70-198C-49E8-950D-1C967517B5B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6D8F59C-67AD-492E-9CA6-03CF6CF366A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6D8F59C-67AD-492E-9CA6-03CF6CF366A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6D8F59C-67AD-492E-9CA6-03CF6CF366A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6D8F59C-67AD-492E-9CA6-03CF6CF366A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8289334E-A6A7-4256-A6B0-CBD62ABB1E27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8289334E-A6A7-4256-A6B0-CBD62ABB1E27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8289334E-A6A7-4256-A6B0-CBD62ABB1E27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8289334E-A6A7-4256-A6B0-CBD62ABB1E27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAC6B0FB-8EA4-4751-9461-24EE9BA13BC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAC6B0FB-8EA4-4751-9461-24EE9BA13BC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAC6B0FB-8EA4-4751-9461-24EE9BA13BC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAC6B0FB-8EA4-4751-9461-24EE9BA13BC7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8222F53-80D7-480D-8BDA-E7B3F0E9659B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8222F53-80D7-480D-8BDA-E7B3F0E9659B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8222F53-80D7-480D-8BDA-E7B3F0E9659B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8222F53-80D7-480D-8BDA-E7B3F0E9659B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63C87F78-879A-4722-85D4-7B77EBEF0CBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63C87F78-879A-4722-85D4-7B77EBEF0CBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63C87F78-879A-4722-85D4-7B77EBEF0CBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63C87F78-879A-4722-85D4-7B77EBEF0CBC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09B133D5-AE6A-45B1-92A7-B2329D5AE580}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09B133D5-AE6A-45B1-92A7-B2329D5AE580}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09B133D5-AE6A-45B1-92A7-B2329D5AE580}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09B133D5-AE6A-45B1-92A7-B2329D5AE580}.Release|Any CPU.Build.0 = Release|Any CPU
+		{585794B4-228B-4F5E-965D-33296097B7C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{585794B4-228B-4F5E-965D-33296097B7C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{585794B4-228B-4F5E-965D-33296097B7C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{585794B4-228B-4F5E-965D-33296097B7C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC9DC6C0-2179-4EC9-902C-50CC0931AB6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC9DC6C0-2179-4EC9-902C-50CC0931AB6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC9DC6C0-2179-4EC9-902C-50CC0931AB6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC9DC6C0-2179-4EC9-902C-50CC0931AB6A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{435BEAD1-58C8-44EB-8C13-1AC8057FD6B6} = {FFB8FED4-AC52-438A-B954-C4FC3E3821F5}
+		{0E6F699F-EE67-43AF-8DDF-2481D28108C5} = {7C29F109-4620-45BF-B77A-BD7D089367F9}
+		{9DA6FC70-198C-49E8-950D-1C967517B5B1} = {FA8B0817-9BD2-4652-955A-02BC87BC8D4B}
+		{F6D8F59C-67AD-492E-9CA6-03CF6CF366A2} = {FA8B0817-9BD2-4652-955A-02BC87BC8D4B}
+		{8289334E-A6A7-4256-A6B0-CBD62ABB1E27} = {7C29F109-4620-45BF-B77A-BD7D089367F9}
+		{DAC6B0FB-8EA4-4751-9461-24EE9BA13BC7} = {7C29F109-4620-45BF-B77A-BD7D089367F9}
+		{C8222F53-80D7-480D-8BDA-E7B3F0E9659B} = {5E6D8585-AC29-49BB-A7BF-D058A124263B}
+		{63C87F78-879A-4722-85D4-7B77EBEF0CBC} = {FA8B0817-9BD2-4652-955A-02BC87BC8D4B}
+		{09B133D5-AE6A-45B1-92A7-B2329D5AE580} = {7C29F109-4620-45BF-B77A-BD7D089367F9}
+		{585794B4-228B-4F5E-965D-33296097B7C7} = {5E6D8585-AC29-49BB-A7BF-D058A124263B}
+		{DC9DC6C0-2179-4EC9-902C-50CC0931AB6A} = {FA8B0817-9BD2-4652-955A-02BC87BC8D4B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {65F3986A-4693-4100-B51F-A9D172B92B3C}

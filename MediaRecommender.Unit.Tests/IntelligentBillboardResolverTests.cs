@@ -26,13 +26,18 @@ namespace MediaRecommender.Unit.Tests
             private static readonly Fixture _fixture = new Fixture();
 
             [Fact]
-            public void IfNoCityIsProvided_ThenOk()
+            public void IfNoCityIsProvided_ThenOkWithoutCallingTheRepoDependency()
             {
                 // Arrange
                 var loggerMock = new Mock<ILogger<IntelligentBillboardResolver>>();
+                IEnumerable<string> inputKeywordIdsSpy = null;
 
                 var billboardRepositoryMock = new Mock<IBillboardRepository>();
                 billboardRepositoryMock.Setup(r => r.GetMoviesAsync(It.IsAny<DateTime>(), It.IsAny<DateTime>(), It.IsAny<IEnumerable<Genre>>(), It.IsAny<IEnumerable<string>>(), It.IsAny<int>()))
+                    .Callback<DateTime, DateTime, IEnumerable<Genre>, IEnumerable<string>, int>((a,b,c,keywordIds,e) =>
+                    {
+                        inputKeywordIdsSpy = keywordIds;
+                    })
                     .ReturnsAsync(_fixture.Create<GetMoviesBillboardRepositoryResponse>());
 
                 var internalDbRepositoryMock = new Mock<IInternalDbRepository>();
@@ -55,6 +60,8 @@ namespace MediaRecommender.Unit.Tests
 
                 // Assert
                 func.Should().NotThrow<Exception>();
+                internalDbRepositoryMock.Verify(r => r.GetSuccessfulMoviesByCityName(It.IsAny<string>()), Times.Never);
+                inputKeywordIdsSpy.Should().BeEmpty();
             }
         }
 
